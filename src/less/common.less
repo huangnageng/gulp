@@ -1,0 +1,136 @@
+// 相同部分
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  min-width: 1200px;
+  position: relative;
+}
+/*清除浮动start*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+.clear {
+  clear: both;
+  height: 0;
+  font: 0/0 Arial;
+  visibility: hidden;
+}
+/*清除浮动end*/
+
+.through {
+  text-decoration: line-through;
+}
+
+/*去除Chrome等浏览器文本框默认发光边框*/
+input:focus,
+textarea:focus,
+button,
+div[contenteditable="true"] {
+  outline: none;
+}
+/*去除input button默认样式*/
+input[type="button"] {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -webkit-appearance: none;
+}
+/*输入框placeholder样式*/
+input::-webkit-input-placeholder {
+  color: @C2;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: @C2;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: @C2;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: @C2;
+}
+textarea::-webkit-input-placeholder {
+  color: @C2;
+}
+textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: @C2;
+}
+textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: @C2;
+}
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: @C2;
+}
+
+/*单行省略号*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*两行省略号*/
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.letter-spacing(@fontsize:14px;@spacing:120) {
+  letter-spacing: @fontsize / 1000 * @spacing;
+}
+
+// 垂直居中
+.vertical_fixed(@top:50%;@y:-50%) {
+  position: absolute;
+  top: @top;
+  -webkit-transform: translateY(@y);
+  -moz-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  transform: translateY(@y);
+}
+
+/*水平垂直居中*/
+.horizontal-centering(@top:50%;@y:-50%;@left:50%;@x:-50%) {
+  position: absolute;
+  top: @top;
+  left: @left;
+  -webkit-transform: translateY(@y) translateX(@x);
+  -moz-transform: translateY(@y translateX(@x));
+  -ms-transform: translateY(@y) translateX(@x);
+  transform: translateY(@y) translateX(@x);
+}
