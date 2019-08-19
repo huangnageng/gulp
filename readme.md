@@ -1,10 +1,10 @@
-## 安装依赖
+## 安装依赖（要是执行完后还有哪个依赖没有安装就再次安装哪个依赖）
 
 npm install
 
 ## 运行查看效果
 
-npm start
+gulp start
 
 ## delivery
 
